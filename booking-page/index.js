@@ -9,8 +9,10 @@ const currentHour = Number(
     .toLocaleString("en-US", { hour: "numeric", hour12: true })
     .split(" ")[0]
 );
-
+const currentHour24 = currentDate.getHours();
 const currentMinutes = currentDate.getMinutes();
+
+console.log(currentHour24);
 
 const days = {
   1: "Sun",
@@ -43,7 +45,7 @@ FRI <br />
 OCT
 </div>`;
 
-// Rendering Dates from today to next 7 days logic (today is highlighted by default)
+// Rendering Dates from today to next 7 days (today is highlighted by default)
 
 dates.innerHTML = "";
 
@@ -72,13 +74,32 @@ date.forEach((d) => {
   });
 });
 
+// Rendering Timings for current day (not rendering elapsed time)
+
+// const timeHtml = `<div class="timing">
+// <p>8:15</p>
+// </div>`;
+// const movieTimings = ["8:15", "11:30", "14:40", "15:30", "20:00", "23:10"];
+// const activeDate = document.querySelector(".active-date");
+// const timings = document.querySelector(".timings");
+// console.log(timings);
+
+// if (
+//   activeDate.textContent.trim().split(" ")[0] === days[currentDate.getDay() + 1]
+// ) {
+//   movieTimings.forEach((mt) => {
+//     if (parseInt(`${currentHour24}:${currentMinutes}`) < parseInt(mt))
+//       console.log(mt);
+//   });
+// }
+
 // Activating Timings (on click highlight)
 const timing = document.querySelectorAll(".timing");
-const seatBtn = document.querySelector(".seat-btn-section");
+const seatBtnSection = document.querySelector(".seat-btn-section");
 
 timing.forEach((t) => {
   t.addEventListener("click", () => {
-    seatBtn.classList.remove("hidden");
+    seatBtnSection.classList.remove("hidden");
     const activatedTime = document.querySelector(".active-time");
     //short circuit operator below
     activatedTime && activatedTime.classList.remove("active-time");
@@ -86,29 +107,28 @@ timing.forEach((t) => {
   });
 });
 
-//TESTING CODE
-// Settle timings for current day
-// const activeDate = document.querySelector(".active-date");
-// const times = document.querySelectorAll(".timing p");
+// MODEL POPUP FOR SEAT QUANTITY
+const seatBtn = document.querySelector(".seat-btn");
+const model = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
 
-// console.log(activeDate.textContent.trim().split(" ")[0]);
-// // console.log(days[currentDate.getDay() + 1]);
-// console.log(
-//   activeDate.textContent.trim().split(" ")[0] === days[currentDate.getDay() + 1]
-// );
+seatBtn.addEventListener("click", (e) => {
+  model.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+});
 
-// if (
-//   activeDate.textContent.trim().split(" ")[0] === days[currentDate.getDay() + 1]
-// ) {
-//   const currentHour = currentDate.getHours();
-//   const currentMinutes = currentDate.getMinutes();
-//   console.log(`${currentHour}:${currentMinutes}`);
+overlay.addEventListener("click", () => {
+  model.classList.add("hidden");
+  overlay.classList.add("hidden");
+});
 
-//   times.forEach((p) => {
-//     if (
-//       parseInt(`${currentHour}:${currentMinutes}`) >
-//       parseInt(p.innerHTML.split(" ")[0])
-//     )
-//       console.log(p.innerHTML.split(" ")[0]);
-//   });
-// }
+// Activating Seats Quantity (on click highlight)
+const seat = document.querySelectorAll(".seat");
+
+seat.forEach((s) => {
+  s.addEventListener("click", () => {
+    const activatedSeat = document.querySelector(".active-seat");
+    activatedSeat.classList.remove("active-seat");
+    s.classList.add("active-seat");
+  });
+});

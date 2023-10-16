@@ -19,7 +19,9 @@ button:hover {
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
 }
 
 .active-date {
@@ -37,8 +39,6 @@ main {
   background-color: white;
 }
 
-
-
 /* HEADER  */
 
 .header {
@@ -50,6 +50,7 @@ main {
 .tags {
   padding: 10px 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   background-color: #333545;
@@ -66,6 +67,7 @@ main {
 .dates {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   padding: 10px;
 }
@@ -88,6 +90,7 @@ main {
 .timings-section {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 50px;
   padding: 30px;
 }
@@ -117,6 +120,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+
   gap: 10px;
 }
 
@@ -146,4 +151,112 @@ main {
 
 .seat-btn-section {
   text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 200ms;
+  /* opacity: 0; */
+  height: 100%;
+  width: 100%;
+}
+
+.modal {
+  margin: auto;
+  width: 500px;
+  background-color: white;
+  padding: 35px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  border-radius: 10px;
+  transition: 0.2s all;
+}
+
+.modal-heading {
+  margin-bottom: 40px;
+}
+
+.seat-nums {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 40px;
+  margin-top: 30px;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.modal hr {
+  margin: 40px 0;
+}
+
+.seat-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.select-btn button {
+  padding: 10px 20px;
+  background-color: #f84464;
+  color: white;
+  border: none;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.seat {
+  /* padding: 10px; */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seat:hover {
+  background-color: #f84464;
+  color: white;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+
+.active-seat {
+  background-color: #f84464;
+  color: white;
+  border-radius: 1000px;
+}
+
+@media screen and (max-width: 550px) {
+  .modal {
+    width: 80%;
+    padding: 30px 0;
+  }
+  .seat-nums {
+    justify-content: center;
+    margin: 0;
+  }
+  .timings-section {
+    justify-content: center;
+    gap: 30px;
+  }
+  .dates {
+    justify-content: center;
+  }
+  .seat-type {
+    gap: 20px;
+    padding: 10px;
+  }
+  .modal hr {
+    margin: 20px 0;
+  }
 }
