@@ -1,8 +1,13 @@
 
 
+
 function loading() {
+
+
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+
+    
 
     const storedDataJSON = localStorage.getItem('newdata');
 
@@ -10,13 +15,16 @@ function loading() {
         const storedData = JSON.parse(storedDataJSON);
 
         if (email === storedData.email && password === storedData.password) {
-            alert("Login successful!");
+            
             window.location.href = 'index.html';
          
         } else {
-            alert("Invalid email or password. Please try again.");
+         
+            document.getElementById('errorvalidation').innerHTML = "Please enter correcct email and password !!"
+
         }
     } else {
         alert("No user data found. Please sign up.");
     }
 }
+
