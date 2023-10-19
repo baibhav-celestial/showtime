@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+body{
+    background-color: rgb(43 39 83);
+}
+
+.booking-page {
+    display: flex;
+    height: 100vh;
+    border: 2px solid rgb(149 181 33);
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    margin-top: 7%;
+    background-color: rgb(149 181 33);
+    border-radius: 25px;
+
+}
+.right-booking-page{
+   
+    margin: 20px;
+
+}
+.right-booking-page h1{
+    margin-top: 25px;
+}
+.right-booking-page h3{
+    margin-top: 10px;
+}
+.right-booking-page button{
+    margin-top: 10px;
+ 
+    background-color:#765656 ;
+    color: beige;
+    border: 1px solid #765656;
+    cursor: pointer;
+    font-weight: 600;
+    
+    width: 125px;
+    height: 41px;
+    font-size: 18px;
+}
+
+.left-booking-page{
+    margin: 20px;
+}
+.right-booking-page h1{
+color: rgb(43 39 83);
+}
+.right-booking-page h3{
+    color: rgb(43 39 83);
+}
+.left-booking-page img:hover{
+    box-shadow: 10px 10px 8px black;
+    
+}
+.heading-main{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 26%;
+    margin-top: 20px;
+}
+.heading-main h1{
+    margin-left: 50px;
+    color: white;
+
+}
+.heading-main h2{
+    color: white;
+}
