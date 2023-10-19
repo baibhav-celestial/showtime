@@ -39,12 +39,20 @@ main {
   background-color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* HEADER  */
 
 .header {
   padding: 40px 30px;
   background-color: #333545;
   color: white;
+}
+
+.back span {
+  font-size: 40px;
 }
 
 .tags {
@@ -135,8 +143,6 @@ main {
 }
 
 .timing:hover {
-  /* background-color: #30917c; */
-  /* opacity: 0.1; */
   cursor: pointer;
 }
 
@@ -206,13 +212,19 @@ main {
   gap: 40px;
 }
 
-.select-btn button {
-  padding: 10px 20px;
+.select-btn {
+  margin-top: 30px;
+}
+
+.select-btn a {
+  padding: 8px 16px;
   background-color: #f84464;
   color: white;
   border: none;
   width: 80%;
-  margin-top: 30px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 15px;
 }
 
 .seat {
