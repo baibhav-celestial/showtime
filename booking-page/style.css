@@ -45,6 +45,11 @@ a {
 
 /* HEADER  */
 
+.arrow-back {
+  text-decoration: none;
+  color: white;
+}
+
 .header {
   padding: 40px 30px;
   background-color: #333545;
