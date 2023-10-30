@@ -64,7 +64,6 @@ nav h3 {
   gap: 3rem;
 }
 
-
 nav div input {
   width: 50%;
   padding: 8px 16px;
@@ -78,12 +77,14 @@ nav div input:focus {
   outline: none;
 }
 
-nav div button {
+nav div a {
   padding: 8px 16px;
   border: none;
   border-radius: 20px;
   background-color: #f9b804;
-  /* font-weight: bold; */
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
 }
 
 .hero-content {
@@ -187,12 +188,11 @@ nav div button {
 .movie-container {
   position: relative;
   /* background-color: #0283fb; */
-
 }
-.movie{
+.movie {
   display: flex;
-    flex-direction: column;
-    margin-bottom: 80px;
+  flex-direction: column;
+  margin-bottom: 80px;
 }
 
 .view-all {
@@ -213,11 +213,11 @@ nav div button {
 .movie {
   /* transition: 0.3s all; */
   margin: 0 10px;
- 
+
   display: grid;
   grid-column-gap: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-      /* display: flex;
+  /* display: flex;
     flex-direction: column; */
 }
 
@@ -295,11 +295,10 @@ footer ul {
   font-size: 13px;
   padding-bottom: 60px;
 }
-.movie-row{
+.movie-row {
   display: flex;
-
 }
-.movie{
+.movie {
   margin: 0 10px;
 }
 
@@ -349,7 +348,7 @@ footer ul {
     font-size: 2rem;
   }
 }
-.NewMovies{
+.NewMovies {
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;

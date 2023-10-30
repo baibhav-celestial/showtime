@@ -1,167 +1,68 @@
-*{
-    margin: 0;
-    padding: 0;
-   
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-color: rgb(43 39 83);
+body {
+  background-color: black;
+  color: rgb(229, 229, 229);
+  font-family: "Fredoka", sans-serif;
 }
-
-.booking-page {
-    display: flex;
-    height: 100vh;
-    border: 2px solid rgb(149 181 33);
-    width: 70%;
-    height: 50%;
-    margin: auto;
-    margin-top: 7%;
-    background-color: rgb(149 181 33);
-    border-radius: 25px;
-
-}
-.right-booking-page{
-   
-    margin: 20px;
-
-}
-.right-booking-page h1{
-    margin-top: 25px;
-}
-.right-booking-page h3{
-    margin-top: 10px;
-}
-.right-booking-page button{
-    margin-top: 10px;
- 
-    background-color:#765656 ;
-    color: beige;
-    border: 1px solid #765656;
-    cursor: pointer;
-    font-weight: 600;
-    
-    width: 125px;
-    height: 41px;
-    font-size: 18px;
+.movie-points,
+.movie-tagline {
+  color: #9c9c9c;
 }
 
-.left-booking-page{
-    margin: 20px;
-}
-.right-booking-page h1{
-color: rgb(43 39 83);
-}
-.right-booking-page h3{
-    color: rgb(43 39 83);
-}
-.left-booking-page img:hover{
-    box-shadow: 10px 10px 8px black;
-    
-}
-.heading-main{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 26%;
-    margin-top: 20px;
-}
-.heading-main h1{
-    margin-left: 50px;
-    color: white;
-
-}
-.heading-main h2{
-    color: white;
+.movieDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  height: 100vh;
 }
 
-
-
- 
-.heading-main {
-    text-align: center;
-    padding: 20px;
-    background-color: #007bff; 
-    color: #fff; 
-  }
-  
-
-  .heading {
-    font-size: 36px;
-    margin: 0;
-  }
-  
-
-  .heading-main h2 {
-    font-size: 20px;
-    margin-top: 10px;
-  }
-  
-
-  .booking-page {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    margin-left: 200px;
-  }
-  
-
-  
- 
-  .right-booking-page {
-    flex: 1; 
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-evenly  ;
-  }
-.right{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
+.title-rating h1 {
+  font-size: 35px;
 }
-  
+.votes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  #movie-title {
-    font-size: 24px;
-    margin: 10px 0;
-  }
-  
- 
-  #movie-vote-average {
-    font-size: 18px;
-    margin: 10px 0;
-    color: rgb(43 39 83); 
-  }
-  
- 
-  #movie-language {
-    font-size: 16px;
-    margin: 10px 0;
-  }
-  
+.title-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  #movie-poster {
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0;
-  }
-  
-  
-  button[data-movie-id] {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 10px;
-    width: 160px;
-  }
-  
-  button[data-movie-id]:hover {
-    background-color: #0056b3; 
-  }
-  
+.title-rating p {
+  font-size: 25px;
+}
+.title-rating span {
+  color: yellow;
+  margin-left: 10px;
+}
+.movie-tagline {
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.details {
+  width: 40%;
+}
+
+.description {
+  margin: 5px 0 20px 0;
+}
+
+.ticket-btn {
+  padding: 12px 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #0283fb;
+  color: white;
+  text-decoration: none;
+}
+.ticket-btn-container {
+  margin-top: 30px;
+}
