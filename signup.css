@@ -10,7 +10,7 @@
 }
 .loginsignup-container{
     width: 380px;
-    height: 400px;
+    height: 450px;
     background: white;
     margin: auto;
     padding: 40px 60px;
@@ -82,4 +82,7 @@ font-weight: 500;
 #account{
     margin-top: 10px;
     cursor: pointer;
+}
+.loginsignup-login a{
+    text-decoration: none;
 }

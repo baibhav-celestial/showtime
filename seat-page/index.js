@@ -1,6 +1,6 @@
 const seatNum = document.querySelectorAll(".seat-num:not(.sold)");
 const payment = document.querySelector(".pay");
-console.log(payment);
+
 
 const ticketsQuantity = [1, 2, 3];
 
@@ -19,3 +19,4 @@ seatNum.forEach((sn, i) => {
     });
   });
 });
+
