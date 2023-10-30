@@ -221,7 +221,7 @@ hr {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.pay button {
+.pay a {
   background-color: #f84464;
   margin-bottom: 100px;
   text-align: center;
