@@ -1,5 +1,7 @@
 const seatNum = document.querySelectorAll(".seat-num:not(.sold)");
+
 const paymentEl = document.querySelector(".pay");
+
 
 const ticketsQuantity = [1, 2];
 const ticketsLength = ticketsQuantity.length;
@@ -29,3 +31,4 @@ seatNum.forEach((sn, i) => {
     document.querySelector(".pay a").textContent = `Pay Rs.${paymentAmount}`;
   });
 });
+

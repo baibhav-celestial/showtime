@@ -146,3 +146,20 @@ overlay.addEventListener("click", () => {
   model.classList.add("hidden");
   overlay.classList.add("hidden");
 });
+
+document.addEventListener('DOMContentLoaded',function(){
+  const urlParms = new URLSearchParams(window.location.search);
+  const movieName = urlParms.get('movieName');
+  const movieId = urlParms.get('movieId');
+
+  // if(moviename){
+  //   document.querySelector('.thank you p').textContent = moviename
+  // }
+
+  if(movieName && movieId){
+  document.getElementById('first-movie').textContent = ` ${decodeURIComponent(movieName)}`
+  }
+})
+
+
+// document.getElementById('first-movie').text
